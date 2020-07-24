@@ -7,6 +7,7 @@ let path = require('path')
 let expressLayouts = require('express-ejs-layouts')
 
 let app = express()
+let mongodb = require('./framework/mongoose')
 
 app.use(helmet())
 app.use(cors(configs.cors))
@@ -19,6 +20,7 @@ app.use('/public',express.static(path.join(__dirname + '/', 'public')))
 app.use(expressLayouts)
 app.use(bodyParser.json())
 
+mongodb.Initialize()
 
 var appRouter = new express.Router()
 require('./routers/index.router.js')(appRouter)

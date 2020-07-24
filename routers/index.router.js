@@ -10,13 +10,13 @@ module.exports  = (router) => {
     .route('/post/:id')
     .get(IndexController.ViewPost)
     
+    // router
+    // .route('/admin/post/:id')
+    // .get()
+
 
     // router
     // .route('/admin')
-    // .get()
-
-    // router
-    // .route('/admin/post/:id')
     // .get()
 
 }
