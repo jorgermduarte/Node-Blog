@@ -38,6 +38,11 @@ npm install
 npm run
 ```
 
+## Run Adminbro to try it out and start creating your posts
+
+```sh
+node adminbro
+```
 ---
 
 ## Authors
