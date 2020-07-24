@@ -40,9 +40,6 @@ npm run
 
 ---
 
----
-
-
 ## Authors
 
 👤 **Jorge Duarte**
