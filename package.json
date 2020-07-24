@@ -1,0 +1,16 @@
+{
+  "name": "node-blog-mongo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.controller.js",
+  "scripts": {
+    "start": "node blog"
+  },
+  "author": "Jorge Duarte <joka867@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.25"
+  }
+}
