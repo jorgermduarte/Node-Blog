@@ -62,10 +62,13 @@ node adminbro
 
 ## Next Features
 
-- [ ] User Authentication
-- [ ] Post Comments
+- [ ] Blog Archive
+- [ ] Share
+- [ ] Buy me a Coffee
 - [ ] Admin Dashboard
 - [ ] RSS Provider
+- [ ] User Authentication
+- [ ] Post Comments
 
 ---
 
