@@ -29,7 +29,8 @@ For those who wish to setup an operable blog in minutes, this is the project for
 
 ## Dependencies
 
-
+- NodeJS
+- MongoDB
 
 
 ## Install
