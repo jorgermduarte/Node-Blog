@@ -60,13 +60,19 @@ node adminbro
 
 ---
 
+## Current Features
+
+* Create, edit, and delete your posts (adminbro).
+* RSS capable.
+* Utilizes the Express web framework.
+* Uses MongoDB on the backend.
+* Uses Ejs views & layouts.
+
 ## Next Features
 
 - [ ] Blog Archive
 - [ ] Share
-- [ ] Buy me a Coffee
 - [ ] Admin Dashboard
-- [ ] RSS Provider
 - [ ] User Authentication
 - [ ] Post Comments
 
