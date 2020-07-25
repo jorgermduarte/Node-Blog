@@ -52,19 +52,18 @@ node adminbro
 
 ---
 
-## Next Features
-
-- [ ] User Authentication
-- [ ] Post Comments
-- [ ] Admin Dashboard
-
----
-
 ## Project Preview
 
 ![Main Page](https://raw.githubusercontent.com/jorgermduarte/Node-Blog/master/public/imgs/example/index.png)
 ![Post Details](https://raw.githubusercontent.com/jorgermduarte/Node-Blog/master/public/imgs/example/details.png)
 
+---
+
+## Next Features
+
+- [ ] User Authentication
+- [ ] Post Comments
+- [ ] Admin Dashboard
 
 ---
 
