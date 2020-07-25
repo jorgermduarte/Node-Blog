@@ -18,8 +18,9 @@
   <img src="https://forthebadge.com/images/badges/made-with-javascript.svg">
 </p>
 
-> This project is a simple and easy to use blog for the casual blogger. 
-> For those who wish to setup an operable blog in minutes, this is the project for you.
+This project is a simple and easy to use blog for the casual blogger. 
+
+For those who wish to setup an operable blog in minutes, this is the project for you.
 
 
 ### 🏠 [Homepage](https://github.com/jorgermduarte/Node-Blog#readme)
