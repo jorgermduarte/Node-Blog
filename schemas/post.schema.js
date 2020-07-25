@@ -48,7 +48,7 @@ let methods = {
             Post
             .aggregate(aggregator)
             .then( response => {
-                console.log(response);
+                // console.log(response);
                 resolve(response)
             }).catch( err => {
                 reject(err)
@@ -78,7 +78,7 @@ let methods = {
             Post
             .aggregate(aggregator)
             .then( response => {
-                console.log(response);
+                // console.log(response);
                 resolve(response)
             }).catch( err => {
                 reject(err)
