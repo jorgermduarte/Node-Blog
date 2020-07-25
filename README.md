@@ -58,7 +58,7 @@ node adminbro
 
 ## Project Preview
 
-![Main Page](https://github.com/jorgermduarte/Node-Blog/public/imgs/index.png)
+![Main Page](https://raw.githubusercontent.com/jorgermduarte/Node-Blog/master/public/imgs/example/index.png)
 
 ---
 
