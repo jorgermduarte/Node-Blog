@@ -56,6 +56,12 @@ node adminbro
 
 ---
 
+## Project Preview
+
+![Main Page](https://github.com/jorgermduarte/Node-Blog/public/imgs/index.png)
+
+---
+
 ## Authors
 
 👤 **Jorge Duarte**
