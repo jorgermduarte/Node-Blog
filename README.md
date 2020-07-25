@@ -18,7 +18,8 @@
   <img src="https://forthebadge.com/images/badges/made-with-javascript.svg">
 </p>
 
-> This project is a integration of several modules in order to provide various types of customized data and oriented to all user needs, providing this information over api's and existing softwares like Discord and Slack.
+> This project is a simple and easy to use blog for the casual blogger. 
+> For those who wish to setup an operable blog in minutes, this is the project for you.
 
 
 ### 🏠 [Homepage](https://github.com/jorgermduarte/Node-Blog#readme)
