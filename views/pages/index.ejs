@@ -2,6 +2,8 @@
 
 <% data.forEach( post => { %>
 
+    <% let publisher = post.publisher[0]; %>
+
     <div class="row">
 
         <!-- Post Content Column -->
@@ -9,11 +11,15 @@
     
           <!-- Title -->
           <h1 class="mt-4"><%-post.title %></h1>
+
+          <div style="float:right;margin-top:-20px;">
+            <img src="<%-publisher.avatar%>" alt="" srcset="" class="img-responsive rounded-circle" style="max-height:50px;">
+          </div>
     
           <!-- Author -->
           <p class="lead">
             by
-            <a href="#"><%-post._user %></a>
+            <a href="#"><%-publisher.email %></a>
           </p>
     
           <hr>
@@ -35,7 +41,11 @@
     
           <hr>
     
-          <a href="/post/<%-post._id%>">Ver Detalhes do Post</a>
+          <a href="/post/<%-post._id%>">
+            <button class="btn btn-sm btn-secondary">
+              See Post Details
+            </button>
+          </a>
 
         </div>
     

@@ -3,6 +3,12 @@ var mongoose = require('mongoose')
 
 var Schema = mongoose.Schema;
 
+
+// var userSchema = require('./user.schema')
+
+
+
+var User = require('./user.schema').Schema;
 var PostSchema = new Schema({
     _user : { type: Schema.Types.ObjectId, ref: 'User' },
     title : { type: String, required : true},
@@ -18,29 +24,64 @@ var PostSchema = new Schema({
 let Post = mongoose.model("Post",PostSchema);
 
 
+
 let methods = {
     GetAllPosts : () => {
         return new Promise((resolve,reject) => {
-            Post.find({
+            var checkdata =  {
                 active : true
-            }).exec((err,res) => {
-                if(err)
-                    reject(err)
-                else
-                    resolve(res)
+            }
+            
+            var aggregator = [
+                { "$match": { ...checkdata }},
+                { "$sort" : {"_id" : -1} },
+                { 
+                    $lookup: {
+                        from: "users",
+                        localField: "_user",
+                        foreignField: "_id",
+                        as: "publisher"
+                    },
+            }
+            ];
+
+            Post
+            .aggregate(aggregator)
+            .then( response => {
+                console.log(response);
+                resolve(response)
+            }).catch( err => {
+                reject(err)
             })
         })
     },
     FindPostById : (id) => {
-        return new Promise((resolve,reject) => {
-            Post.findOne({
-                _id : id,
+        return new Promise(async (resolve,reject) => {
+        
+            var checkdata =  {
+                _id : mongoose.Types.ObjectId(id),
                 active : true
-            }).populate('User').exec((err,res) => {
-                if(err)
-                    reject(err)
-                else
-                    resolve(res)
+            }
+
+            var aggregator = [
+                { "$match": { ...checkdata }},
+                { 
+                    $lookup: {
+                        from: "users",
+                        localField: "_user",
+                        foreignField: "_id",
+                        as: "publisher"
+                    },
+            }
+            ];
+
+            Post
+            .aggregate(aggregator)
+            .then( response => {
+                console.log(response);
+                resolve(response)
+            }).catch( err => {
+                reject(err)
             })
         })
     }

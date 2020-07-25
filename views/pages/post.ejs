@@ -1,34 +1,42 @@
 <%- contentFor('content') %>
 
+<% let post = data[0] %>
+<% let publisher = data[0].publisher[0] %>
 <div class="row">
 
     <!-- Post Content Column -->
     <div class="col-lg-8">
 
       <!-- Title -->
-      <h1 class="mt-4"><%-data.title %></h1>
+      <h1 class="mt-4"><%-post.title %></h1>
+
+      <div style="float:right;margin-top:-20px;">
+        <img src="<%-publisher.avatar%>" alt="" srcset="" class="img-responsive rounded-circle" style="max-height:50px;">
+      </div>
 
       <!-- Author -->
       <p class="lead">
         by
-        <a href="#"><%-data._user %></a>
+        <a href="#"><%-publisher.email %></a>
+
+
       </p>
 
       <hr>
 
       <!-- Date/Time -->
-      <p>Posted on <%-data.date_create %></p>
+      <p>Posted on <%-post.date_create %></p>
 
       <hr>
 
       <!-- Preview Image -->
-      <img class="img-fluid rounded" src="<%-data.image %>" alt="">
+      <img class="img-fluid rounded" src="<%-post.image %>" alt="">
 
       <hr>
 
       <!-- Post Content -->
       <div id="post-content">
-        <%=data.content %>
+        <%=post.content %>
       </div>
 
       <!-- <blockquote class="blockquote">
@@ -48,22 +56,22 @@
             <div class="form-group">
               <textarea class="form-control" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" disabled>Submit</button>
           </form>
         </div>
       </div>
 
       <!-- Single Comment -->
-      <div class="media mb-4">
+      <!-- <div class="media mb-4">
         <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
         <div class="media-body">
           <h5 class="mt-0">Commenter Name</h5>
           Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
         </div>
-      </div>
+      </div> -->
 
       <!-- Comment with nested comments -->
-      <div class="media mb-4">
+      <!-- <div class="media mb-4">
         <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
         <div class="media-body">
           <h5 class="mt-0">Commenter Name</h5>
@@ -86,7 +94,7 @@
           </div>
 
         </div>
-      </div>
+      </div> -->
 
     </div>
 
@@ -94,7 +102,7 @@
     <div class="col-md-4">
 
       <!-- Search Widget -->
-      <!-- <div class="card my-4">
+      <div class="card my-4">
         <h5 class="card-header">Search</h5>
         <div class="card-body">
           <div class="input-group">
@@ -104,42 +112,24 @@
             </span>
           </div>
         </div>
-      </div> -->
+      </div>
 
       <!-- Categories Widget -->
-      <!-- <div class="card my-4">
-        <h5 class="card-header">Categories</h5>
+      <div class="card my-4">
+        <h5 class="card-header">Post Tags</h5>
         <div class="card-body">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
               <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#">Web Design</a>
-                </li>
-                <li>
-                  <a href="#">HTML</a>
-                </li>
-                <li>
-                  <a href="#">Freebies</a>
-                </li>
+               <% post.tags.split(';').forEach( tag => {%> 
+                <li><%= tag%></li>
+              <%});%>
               </ul>
             </div>
-            <div class="col-lg-6">
-              <ul class="list-unstyled mb-0">
-                <li>
-                  <a href="#">JavaScript</a>
-                </li>
-                <li>
-                  <a href="#">CSS</a>
-                </li>
-                <li>
-                  <a href="#">Tutorials</a>
-                </li>
-              </ul>
-            </div>
+         
           </div>
         </div>
-      </div> -->
+      </div>
 
       <!-- Side Widget -->
       <!-- <div class="card my-4">
