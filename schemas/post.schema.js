@@ -26,7 +26,7 @@ let Post = mongoose.model("Post",PostSchema);
 
 
 let methods = {
-    GetAllPosts : () => {
+    GetAllPosts : (limit = 0) => {
         return new Promise((resolve,reject) => {
             var checkdata =  {
                 active : true
@@ -35,6 +35,14 @@ let methods = {
             var aggregator = [
                 { "$match": { ...checkdata }},
                 { "$sort" : {"_id" : -1} },
+              
+            ];
+
+            if(limit > 0)
+                aggregator.push({ $limit : limit });
+
+
+            aggregator.push(
                 { 
                     $lookup: {
                         from: "users",
@@ -42,8 +50,8 @@ let methods = {
                         foreignField: "_id",
                         as: "publisher"
                     },
-            }
-            ];
+                }
+            );
 
             Post
             .aggregate(aggregator)

@@ -10,6 +10,10 @@ module.exports  = (router) => {
     .route('/post/:id')
     .get(IndexController.ViewPost)
     
+    router
+    .route('/rss')
+    .get(IndexController.RssFeed)
+
     // router
     // .route('/admin/post/:id')
     // .get()

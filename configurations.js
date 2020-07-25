@@ -14,5 +14,18 @@ module.exports = {
             useUnifiedTopology: true,
             useFindAndModify: false
         }
+    },
+    rss : {
+        title : 'RSS Feed Provider',
+        description : 'RSS Feed Provider - blog posts',
+        image : "",
+        language : "en",
+        favicon : "",
+        categories : ["blog","tech"],
+        author: {
+            name: "Jorge Duarte",
+            email: "joka867@hotmail.com",
+            link: "https://jorgermduarte.herokuapp.com"
+        }
     }
 }

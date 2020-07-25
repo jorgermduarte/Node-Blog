@@ -15,6 +15,8 @@
     "ejs": "^3.1.3",
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
-    "mongoose": "^5.9.25"
+    "feed": "^4.2.1",
+    "mongoose": "^5.9.25",
+    "xml": "^1.0.1"
   }
 }
