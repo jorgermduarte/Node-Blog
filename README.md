@@ -26,6 +26,8 @@
 ## Dependencies
 
 
+
+
 ## Install
 
 ```sh
@@ -43,6 +45,15 @@ npm run
 ```sh
 node adminbro
 ```
+
+---
+
+## Next Features
+
+- [ ] User Authentication
+- [ ] Post Comments
+- [ ] Admin Dashboard
+
 ---
 
 ## Authors
