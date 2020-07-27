@@ -9,6 +9,9 @@
   "author": "Jorge Duarte <joka867@hotmail.com>",
   "license": "MIT",
   "dependencies": {
+    "helmet": "^3.23.3",
+    "cors" : "^2.8.5",
+    "express-ejs-layouts": "^2.5.0",
     "admin-bro": "^2.8.0",
     "admin-bro-expressjs": "^2.1.1",
     "admin-bro-mongoose": "^0.5.2",
