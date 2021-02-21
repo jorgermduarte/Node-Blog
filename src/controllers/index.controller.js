@@ -1,5 +1,5 @@
 const Feed = require('feed').Feed
-const configs = require('./../configurations')
+const configs = require('../configurations/index')
 
 let render = require('./../framework/render')
 let Post = require('./../schemas/post.schema')
@@ -7,7 +7,6 @@ const { rss } = require('./../configurations')
 
 
 module.exports = {
-
     MainPage : async (req,res) => {
         var allPosts = await Post.Methods.GetAllPosts()
         render({ req : req,  res : res, view : 'index.ejs' , data : allPosts })
@@ -18,7 +17,6 @@ module.exports = {
 
         render({ req : req,  res : res, view : 'post.ejs', data : post })
     },
-
     RssFeed : async (req,res) => {
 
         var feed = new Feed({
@@ -54,7 +52,14 @@ module.exports = {
         res.set('Content-Type', 'text/xml')
 
         res.send(feed.rss2())
+    },
+    ViewAuthRegister :( req,res) => {
+        render({ req : req,  res : res, layout: 'auth', view : 'authregister.ejs' , data : null })
+    },
+    AuthUser :( req,res) => {
+        res.send("to do")
+    },
+    Dashboard : (req,res) => {
+        res.send("to do")
     }
-
-
 }

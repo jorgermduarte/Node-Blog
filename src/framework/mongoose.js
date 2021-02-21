@@ -1,6 +1,6 @@
 
 let mongoose = require('mongoose')
-const configs = require('./../configurations').mongodb
+const configs = require('../configurations/index').mongodb
 let mongo
 
 Initialize = async () => {
